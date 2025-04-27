@@ -1,5 +1,3 @@
-A collection of seven bite-sized Python exercises designed to reinforce key data-engineering and scripting skills. Each folder is a standalone utility that tackles a real-world task—from parsing logs to building ETL pipelines and simple DAG simulations.
-
 ## Included Projects
 
 1. **Log Parser**  
