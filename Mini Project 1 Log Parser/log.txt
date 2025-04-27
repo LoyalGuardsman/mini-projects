@@ -1,0 +1,8 @@
+2025-04-25 14:22:01 INFO    User login successful
+2025-04-25 14:23:15 ERROR   Failed to connect to database
+2025-04-25 14:24:09 WARNING Disk space low
+2025-04-25 15:05:42 ERROR   Failed to connect to database
+2025-04-25 15:10:11 INFO    File uploaded successfully
+2025-04-25 16:45:30 ERROR   User authentication failed
+2025-04-25 17:00:00 INFO    Scheduled job ran
+2025-04-25 17:15:27 WARNING High memory usage

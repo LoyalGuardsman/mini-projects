@@ -1,0 +1,65 @@
+# Counter (from the collections module) is a class to count how many
+# times each item appears in a list, no manual loops needed.
+
+# 4. Parse each line
+
+    	# strip(): Removes any leading and trailing whitespace characters,
+    	# including spaces, tabs, and the newline at the end.
+    	# split(): Breaks the stripped string into a list of "tokens",
+    	# using any whitespace (spaces, tabs) as delimiters.
+
+    	# You now have a list where:
+    	# parts[0] is the date
+ 	# parts[1] is the time
+    	# parts[2] is the level ("ERROR" for example)
+    	# parts[3:] are the individual words of the message.
+
+	# You need at least 3 tokens (date, time, level)
+	# Skips if a line were blank or malformed
+
+    # a) Timestamp → hour
+	# parts[1]: Grabs the second element of the parts list
+    	# e.g. parts[1] == "14:23:15" → hour = "14"
+	# timestamp.split(":")[0] does two things:
+	# 1. .split(delimiter) breaks a string into a  list of substrings wherever it sees the delimiter.
+	#  On "14:23:15": → ["14", "23", "15"]
+	# 2. [0]: Takes the first element of that new list.
+	#  Result: ["14", "23", "15"][0]  → "14"
+
+    # b) Severity and message
+	# " ".join(parts[3:]) - This line takes all the “message” words 
+ 	# (everything after the date, time, and level) 
+	# and stitches them back into one string with spaces
+
+	# parts[3:]: # List slicing. It creates a new list containing every element of parts from index 3 to the end.
+	# If parts was ["2025-04-25", "14:23:15", "ERROR", "Failed", "to", "connect", "to", "database"]
+	# then parts[3:]  == ["Failed", "to", "connect", "to", "database"]
+
+	# " ".join(...) The join method takes an iterable of strings and concatenates them into one string,
+ 	# inserting the specified separator (" ") between each element.
+
+# 6. Most common error
+	# Counter(error_messages)
+	# The list of error-message strings are passed into Counter. 
+	# Counter(error_messages) builds a dictionary mapping each distinct error message to how many times it appears.
+error_messages = [
+  "Failed to connect to database",
+  "User authentication failed",
+  "Failed to connect to database"
+]
+Counter(error_messages)
+#   Counter({
+#      "Failed to connect to database": 2,
+#      "User authentication failed": 1
+#    })
+	# most_common(n) method on a Counter returns the list of the top n elements as (element, count) tuples,
+	# sorted by count descending.
+	# most_common(1) gives you the single most frequent item in a one-element list.
+	# [0]: Since most_common(1) returns a list with one tuple inside, indexing [0] pulls out that tuple itself
+	# The tuple ("Failed to connect to database", 2) is assigned to:
+	# most_common_error = "Failed to connect to database"
+	# count = 2
+
+# 7. Logs per hour
+	# Counter(hours) builds a dictionary mapping each distinct hour to how many times it appears.
+	# sorted(...) takes any iterable of comparable items and returns a new list with those items in ascending order.
