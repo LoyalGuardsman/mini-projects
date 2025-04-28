@@ -1,0 +1,47 @@
+Template: Building a Log Parser
+
+1. Define Requirements:
+
+What log formats do you need to support (e.g. YYYY-MM-DD HH:MM:SS LEVEL Message)?
+Which fields matter (timestamp, level, message, IP, user)?
+What outputs do you need (counts, top-N errors, time buckets, exports)?
+
+2. Locate & Read the File
+
+Resolve the log path relative to your script (so it works regardless of your current working directory)
+Open the file, catch “file not found,” and exit with a clear error if it’s missing
+
+3. Choose a Parsing Strategy
+
+Simple split on whitespace for rigid, known-good formats
+Regex with named groups for flexible formats and future drift
+
+4. Loop & Validate
+
+For each line, apply your parser
+Skip (and optionally log) any lines that don’t match the expected pattern
+
+5. Collect Metrics
+
+Maintain integer counters for each level (INFO/ERROR/WARNING)
+Append every error’s message to a list (for “most common” analysis)
+Append each entry’s hour to a list (for hourly histograms)
+
+6. Summarize & Report
+
+Print totals: counts by level
+Find top-N: use a frequency map on your error-message list
+Hourly buckets: sort your hours list and print HH:00 - N logs
+
+7. Wrap in a if __name__ == "__main__": main() Guard
+
+Prevents side effects on import
+Supports dual use
+Enables clean testing
+
+8. (Optional) Polish for Production
+
+Add a CLI (argparse) for input file, top-N, output path, debug flag
+Use the logging module instead of print() for adjustable verbosity
+Offer CSV/JSON exports for dashboards or downstream scripts
+Write unit tests for your parse and analysis functions
