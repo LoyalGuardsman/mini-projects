@@ -1,0 +1,6 @@
+Name,Email,Date of Birth,Comments
+ Alice  , ALICE@example.com ,01-02-2000,"Good, user"
+bob, bob@Example.Com ,2/5/99,"Needs
+review"
+Charlie,,1998/08/12,No email
+dave,dave123@EXAMPLE.com,"March 3, 2001","Says ""Hello"""

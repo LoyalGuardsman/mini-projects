@@ -1,0 +1,45 @@
+Template: Data Formatter
+
+1. Define Requirements:
+
+Build a script that automatically cleans mess data files.
+Define cleaning rules, for example:
+	Remove leading/trailing whitespace in all string fields
+	Convert Name column to Title Case
+	Convert Email column to lowercase
+	Standardize Date of Birth into format YYYY-MM-DD
+	Drop rows missing Name or Email
+Decide which formats to support (e.g. .csv/.json/.parquet).
+Decide which tools to use (e.g. pandas/pyarrow (for Parquet)).
+
+2. File detection and reading
+
+Write a read_any(path) function
+
+3. File writing
+
+Write a write_any(df, path) function
+
+4. Data cleaning logic
+
+Write a clean_dataframe(df) function
+
+5.Date normalization
+
+Write a normalize_date(x) function
+
+6. Main processing loop
+
+Create main() function
+
+7. Wrap in a if __name__ == "__main__": main() Guard
+
+Prevents side effects on import
+Supports dual use
+Enables clean testing
+
+8. Optional improvements
+
+Add CLI arguments with argparse
+Add a config flag to flatten line breaks
+Validate schema with pandera or a JSON schema
