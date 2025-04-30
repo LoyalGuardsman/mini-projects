@@ -4,7 +4,7 @@
    Read server logs, count INFO/ERROR/WARNING entries, find the most frequent error, and group activity by hour.
 
 2. **Data Formatter**  
-   Practice flexible report generation using `*args` and `**kwargs` to format data into custom tables or summaries.
+   Practice designing a modular Python pipeline to ingest and clean multi-format tabular data. 
 
 3. **CSV Transformer**  
    Clean and reshape CSV data using `pandas`, covering filtering, renaming, type conversions, and aggregation.
