@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run CSV Transformer",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/csv_transformer.py",
+      "args": [
+        "--input", "sample_data.csv",
+        "--output", "output_custom.csv",
+        "--config", "sample_config.json"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
