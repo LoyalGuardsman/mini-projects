@@ -1,0 +1,6 @@
+id,name,age,status,created_at,unnecessary_column
+1,Alice,25.0,active,2023-01-01,x
+2,Bob,30.0,inactive,2023-01-03,y
+3,Charlie,35.0,active,2023-01-02,z
+4,David,,inactive,2023-01-04,x
+5,Eva,28.0,active,2023-01-05,y

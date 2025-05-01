@@ -1,0 +1,8 @@
+{
+  "dropna": true,
+  "drop_columns": ["unnecessary_column"],
+  "rename": {"name": "full_name"},
+  "astype": {"age": "int"},
+  "filter": {"status": "active"},
+  "sort_by": "created_at"
+}
