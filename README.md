@@ -11,13 +11,14 @@
    row cleanup, and sorting, all based on a JSON config file and customizable via CLI flags.
 
 5. **Simple ETL Flow**  
-   Ingest JSON from a public API, transform records, and load them into an SQLite database with Python.
+   Ingest JSON data from a public API, transform and normalize it with Python, and export the results to
+   both CSV and a SQLite database using a modular, CLI-driven ETL pipeline.
 
-6. **PySpark Starter**  
+7. **PySpark Starter**  
    Run a word-count or basic aggregation job on a sample dataset using PySpark’s RDD/DataFrame APIs.
 
-7. **Airflow Sim**  
+8. **Airflow Sim**  
    Mock up a lightweight DAG runner in pure Python to understand task dependencies and scheduling logic.
 
-8. **Trigger-Based News Alert Pipeline**  
+9. **Trigger-Based News Alert Pipeline**  
    Fetch the latest headlines via an API, clean JSON payloads, and send real-time notifications when keywords appear.
