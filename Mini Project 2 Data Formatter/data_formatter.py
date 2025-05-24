@@ -15,9 +15,9 @@ def read_any(path):
         case ".csv":
             return pd.read_csv(path, dtype=str, keep_default_na=False)
         case ".json":
-            return pd.read_json(path, dtype=str)
+            return pd.read_json(path)
         case ".jsonl":
-            return pd.read_json(path, dtype=str, lines=True)
+            return pd.read_json(path, lines=True)
         case ".parquet":
             return pd.read_parquet(path)
         case _:
